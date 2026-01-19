@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     valid = true;
                 } else{
                     res.setText("Incorrect credentials");
+                    valid = false;
                 }
             }
         });
