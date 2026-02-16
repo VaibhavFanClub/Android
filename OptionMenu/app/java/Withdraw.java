@@ -21,4 +21,29 @@ public class Withdraw extends AppCompatActivity {
             return insets;
         });
     }
+
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.optionmenu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem i){
+        int itemId = i.getItemId();
+        switch (itemId){
+            case R.id.o1:
+                Intent w = new Intent(getApplicationContext(), Withdraw.class);
+                startActivity(w);
+                return true;
+            case R.id.o2:
+                Intent d = new Intent(getApplicationContext(), Deposit.class);
+                startActivity(d);
+                return true;
+            case R.id.o3:
+                Intent b = new Intent(getApplicationContext(), Balance.class);
+                startActivity(b);
+                return true;
+            default:
+                return super.onOptionsItemSelected(i);
+        }
+    }
 }
